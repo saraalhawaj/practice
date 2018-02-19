@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>edit your note<p/>
+	<form action="/save/{{object.id}}/" method="POST">
+		{% csrf_token %}
+		<input type="text" placeholder="Title" name="title" value="{{object.title}}"/><br />
+		<input type="text" placeholder="Body" name="body" value="{{object.body}}"/><br />
+
+		<input type="submit">
+	</form>
+	<a href="/detail/{{object.id}}"><button>Cancel</button><a/><br/>
+
+	<form action="/delete/{{object.id}}/">
+		<button>Delete</button>
+	</form>
+</body>
+</html>

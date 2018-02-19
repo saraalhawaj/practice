@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<a href="/home/"><button> <-- </button><a
+	<a href="/create/{{ notebook_id }}"><button>+</button></a><br>
+	{% for object in list %}
+		<a href="/detail/{{object.id}}/">{{object.title}}</a><br>
+	{% endfor %}
+
+</body>
+</html>
+
