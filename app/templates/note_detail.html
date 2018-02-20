@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title></title>
-</head>
-<body>
+{% extends "base.html" %}
+
+
+{% block title %}
+
+{% endblock title %}
+
+
+{% block content %}
 	<a href="/notebook/{{ object.notebook.id }}/"><button> <-- </button><a/><br/>
 	{{object.title}}<br/>
 	{{object.body}}<br/>
@@ -13,5 +15,4 @@
 	<a href="/edit/{{object.id}}"><button>edit</button><a/>
 
 	
-</body>
-</html>
+{% endblock content %}

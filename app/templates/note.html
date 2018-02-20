@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+
+{% block title %}
+
+{% endblock title %}
+
+
+{% block content %}
 	<p>edit your note<p/>
 	<form action="/save/{{object.id}}/" method="POST">
 		{% csrf_token %}
@@ -18,5 +20,4 @@
 	<form action="/delete/{{object.id}}/">
 		<button>Delete</button>
 	</form>
-</body>
-</html>
+{% endblock content %}
